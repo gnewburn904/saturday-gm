@@ -383,20 +383,23 @@ main{padding-top:22px!important;padding-bottom:64px!important}
 .conf-facts>span{display:flex;justify-content:space-between;align-items:baseline;gap:6px;color:var(--muted)}
 .conf-facts b{color:var(--ink);font-family:var(--mono);white-space:nowrap;font-size:12px}
 
-.school-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:6px;margin:10px 0 16px}
+.school-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));grid-auto-rows:1fr;gap:6px;margin:10px 0 16px}
 .school-btn{
   display:flex;
   align-items:center;
   justify-content:center;
   gap:6px;
   padding:9px 6px;
-  min-height:40px;
+  min-height:56px;
+  min-width:0;
+  width:100%;
   font-size:12px;
   border:1px solid var(--line);
   background:#fff;
   color:var(--ink);
   border-radius:2px;
 }
+.school-btn>span:last-child{min-width:0;overflow-wrap:anywhere;line-height:1.35;text-align:center}
 .school-btn[aria-pressed=true]{background:var(--rule);color:var(--bg);border-color:var(--rule);font-weight:800}
 .school-dot{
   width:8px;height:8px;border-radius:50%;flex:0 0 8px;
